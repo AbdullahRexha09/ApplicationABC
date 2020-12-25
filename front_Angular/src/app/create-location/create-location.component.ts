@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../services/locationservice';
 import { City } from '../models/city';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-location',
@@ -11,11 +13,14 @@ export class CreateLocationComponent implements OnInit {
   cities : City;
   latitude : string = '';
   longitude : string = '';
-  constructor(private locationService : LocationService) { }
+  name : string;
+  address : string;
+  city : string;
+  objCity : any;
+  constructor(private locationService : LocationService,private router: Router) { }
 
   ngOnInit() {
     this.locationService.getAllCities().subscribe(response => {
-      debugger;
      this.cities = <City>response;
    },
    err => {
@@ -23,13 +28,25 @@ export class CreateLocationComponent implements OnInit {
    });
   }
   selectedCity(cityId){
-    var objCity = Object.values(this.cities).find(x=>x.id == cityId);
-    if(objCity){
-      this.latitude = objCity.latitude;
-      this.longitude = objCity.longitude;
+    this.objCity = Object.values(this.cities).find(x=>x.id == cityId);
+    if(this.objCity){
+      this.latitude = this.objCity.latitude;
+      this.longitude = this.objCity.longitude;
     }
 
-    debugger;
+  }
+  submit(form:NgForm){
+    var locationObj = {
+      "Name":form.value.name,
+      "Address":form.value.address,
+      "CityId":this.objCity.id
+    }
+    this.locationService.postLocation(locationObj).subscribe(response =>{
+      this.router.navigate(["location"]);
+    });
+  }
+  cancel(){
+    this.router.navigate(["location"]);
   }
 
 }

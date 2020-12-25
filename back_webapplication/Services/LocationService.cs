@@ -13,9 +13,11 @@ namespace webapplication.Services
         {
             this._db = _db;
         }
-        public Location AddLocation(Location location)
+        public void AddLocation(Location location)
         {
-            throw new NotImplementedException();
+            _db.Location.Add(location);
+            _db.SaveChanges();
+            return;
         }
 
         public void DeleteLocation(Guid Id)

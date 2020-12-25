@@ -33,8 +33,11 @@ export class LocationService {
     })
   });
  }
-
-
-
-
+ postLocation(model){
+    return this.http.post(moduleConfig.baserUrl + "api/location/postLocation", model, {
+        headers: new HttpHeaders({
+          "Content-Type": "application/json"
+        })
+      });
+  }
 }

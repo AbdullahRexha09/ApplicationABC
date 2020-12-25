@@ -39,6 +39,19 @@ namespace webapplication.Controllers
             List<Location> locations = locationService.GetAllLocations();
             return Ok(locations);
         }
+        [HttpPost]
+        [Route("postLocation")]
+        public IActionResult PostLocation([FromBody] LocationModel locationModel) 
+        {
+            Location location = new Location
+            {
+                Name = locationModel.Name,
+                Address = locationModel.Address,
+                CityId = locationModel.CityId
+            };
+            locationService.AddLocation(location);
+            return Ok();
+        }
         [HttpDelete]
         [Route("deleteLocation")]
         public IActionResult DeleteLocation(Guid id) 
