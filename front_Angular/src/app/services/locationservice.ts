@@ -19,6 +19,20 @@ export class LocationService {
     })
   });
  }
+ getAllLocations(){
+  return this.http.get(moduleConfig.baserUrl + "api/location/getAllLocations", {
+    headers: new HttpHeaders({
+      "Content-Type": "application/json"
+    })
+  });
+ }
+ deleteLocation(locationId){
+  return this.http.delete(moduleConfig.baserUrl + "api/location/deleteLocation" + "?id=" + locationId, {
+    headers: new HttpHeaders({
+      "Content-Type": "application/json"
+    })
+  });
+ }
 
 
 

@@ -18,9 +18,11 @@ namespace webapplication.Services
             throw new NotImplementedException();
         }
 
-        public bool DeleteLocation(Guid Id)
+        public void DeleteLocation(Guid Id)
         {
-            throw new NotImplementedException();
+            Location location = _db.Location.FirstOrDefault(x => x.Id == Id);
+            _db.Location.Remove(location);
+            _db.SaveChanges();
         }
 
         public List<Location> GetAllLocations()

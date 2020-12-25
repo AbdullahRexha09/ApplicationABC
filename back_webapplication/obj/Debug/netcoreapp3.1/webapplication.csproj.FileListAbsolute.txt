@@ -661,3 +661,4 @@ C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netco
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.pdb
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.csprojAssemblyReference.cache

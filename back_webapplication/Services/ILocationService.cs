@@ -9,7 +9,7 @@ namespace webapplication.Services
     public interface ILocationService
     {
         List<Location> GetAllLocations();
-        bool DeleteLocation(Guid Id);
+        void DeleteLocation(Guid Id);
         Location UpdateLocation(Location location);
         Location AddLocation(Location location);
         List<City> GetAllCities();

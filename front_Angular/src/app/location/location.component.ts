@@ -43,17 +43,37 @@ const COUNTRIES: Country[] = [
 export class LocationComponent implements OnInit {
 
   countries = COUNTRIES;
+  cities : City;
+  locations : Location;
   constructor(private locationService:LocationService) { }
 
   ngOnInit() {
      this.locationService.getAllCities().subscribe(response => {
        debugger;
-      let cities = response
+      this.cities = <City>response;
     },
     err => {
       console.log("Wrong!")
     });
+    this.getLocations();
+ 
     
+  }
+  delete(locationId){
+    debugger;
+    this.locationService.deleteLocation(locationId).subscribe(response =>{
+      this.getLocations();
+    });
+    
+  }
+  getLocations(){
+    this.locationService.getAllLocations().subscribe(response => {
+      debugger;
+      this.locations = <Location>response
+   },
+   err => {
+     console.log("Wrong!")
+   });
   }
 
 }

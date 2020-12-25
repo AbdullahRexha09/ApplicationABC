@@ -39,6 +39,13 @@ namespace webapplication.Controllers
             List<Location> locations = locationService.GetAllLocations();
             return Ok(locations);
         }
+        [HttpDelete]
+        [Route("deleteLocation")]
+        public IActionResult DeleteLocation(Guid id) 
+        {
+            locationService.DeleteLocation(id);
+            return Ok();
+        }
 
     }
 }
