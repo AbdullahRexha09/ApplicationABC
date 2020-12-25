@@ -32,6 +32,13 @@ namespace webapplication.Controllers
             List<City> cities = locationService.GetAllCities();
             return Ok(cities);
         }
+        [HttpGet]
+        [Route("getAllLocations")]
+        public IActionResult GetAllLocations() 
+        {
+            List<Location> locations = locationService.GetAllLocations();
+            return Ok(locations);
+        }
 
     }
 }

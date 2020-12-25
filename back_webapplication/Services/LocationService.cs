@@ -25,7 +25,7 @@ namespace webapplication.Services
 
         public List<Location> GetAllLocations()
         {
-            throw new NotImplementedException();
+            return _db.Location.ToList();
         }
 
         public Location UpdateLocation(Location location)

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapplication.Models;
 
 namespace webapplication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201225150525_LocationAdded2")]
+    partial class LocationAdded2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,42 +50,42 @@ namespace webapplication.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("38f5a480-7a02-40a5-827c-7589f191d92e"),
+                            Id = new Guid("f41a0aa8-f4f6-4864-9688-9d608fb51fbb"),
                             Latitude = "13.4050",
                             Longitude = "52.5200",
                             Name = "Berlin"
                         },
                         new
                         {
-                            Id = new Guid("b9f4bb18-de16-477f-9ce9-cd93c9c1642d"),
+                            Id = new Guid("fe2baf00-c52a-4294-a1fd-dc6c6b2d486e"),
                             Latitude = "4.9041",
                             Longitude = "52.3676",
                             Name = "Amsterdam"
                         },
                         new
                         {
-                            Id = new Guid("75e03fa7-41f9-4748-a31d-0ce87bb380b1"),
+                            Id = new Guid("1972dc17-d28c-4e94-b2e0-bc285a82c1af"),
                             Latitude = "14.5058",
                             Longitude = "46.0569",
                             Name = "Ljubljana"
                         },
                         new
                         {
-                            Id = new Guid("bdde8166-e8b6-44a2-ac84-3ac5da58497c"),
+                            Id = new Guid("b11bb54b-4298-41e8-95d6-1b4dbb6cbd8c"),
                             Latitude = "20.4489",
                             Longitude = "44.7866",
                             Name = "Belgrade"
                         },
                         new
                         {
-                            Id = new Guid("89a81304-9643-4813-bc13-060cd978c56f"),
+                            Id = new Guid("68bc7b6a-dfdb-41b8-85b9-4c712c7fd767"),
                             Latitude = "15.9819",
                             Longitude = "45.8150",
                             Name = "Zagreb"
                         },
                         new
                         {
-                            Id = new Guid("8a9be924-2356-4980-a381-e40933bb0ba2"),
+                            Id = new Guid("dcd792cb-1d7f-425d-90e8-92fc800c735b"),
                             Latitude = "18.4131",
                             Longitude = "43.8563",
                             Name = "Sarajevo"
@@ -97,42 +99,42 @@ namespace webapplication.Migrations
                         },
                         new
                         {
-                            Id = new Guid("13ed15d4-263c-47e8-a31c-11cb095aace1"),
+                            Id = new Guid("050682a4-32d4-451a-aa9f-2a037c6e0368"),
                             Latitude = "12.4964",
                             Longitude = "41.9028",
                             Name = "Rome"
                         },
                         new
                         {
-                            Id = new Guid("470e2e5c-2e49-46d9-bb5e-0d33482d34be"),
+                            Id = new Guid("61fee9ca-fb43-4faa-bdab-ccfe330a2e61"),
                             Latitude = "2.3522",
                             Longitude = "48.8566",
                             Name = "Paris"
                         },
                         new
                         {
-                            Id = new Guid("ab33302d-e32e-490c-bf5c-4d440a57f30a"),
+                            Id = new Guid("ecd3a7aa-2cb5-4476-96a0-b30c833734e4"),
                             Latitude = "3.7038",
                             Longitude = "40.4168",
                             Name = "Madrid"
                         },
                         new
                         {
-                            Id = new Guid("f3b0c5c0-af77-48fe-9307-d7feb7c00c86"),
+                            Id = new Guid("b2e69673-7427-427e-a32a-49f9efae0a08"),
                             Latitude = "28.9784",
                             Longitude = "41.0082",
                             Name = "Istanbul"
                         },
                         new
                         {
-                            Id = new Guid("0eac29f7-7649-4b81-ab72-b2e35c1e9542"),
+                            Id = new Guid("5b0ed914-54bc-4675-a75a-3c25fdff6138"),
                             Latitude = "37.6173",
                             Longitude = "55.7558",
                             Name = "Moscow"
                         },
                         new
                         {
-                            Id = new Guid("7a553363-c6f1-453c-b78a-9d8c84788597"),
+                            Id = new Guid("aa92c52d-1a64-48f4-a9b5-84b5ee0133a8"),
                             Latitude = "18.0686",
                             Longitude = "59.3293",
                             Name = "Stockholm"
@@ -170,7 +172,7 @@ namespace webapplication.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("84d3b430-8c57-40da-afc4-6315e5c8b9a7"),
+                            Id = new Guid("52aba146-8690-41c7-81c4-ff63672819b3"),
                             Address = "Kosove",
                             CityId = new Guid("58ca7a2d-ef9d-47da-9ba2-2a27b76da85c"),
                             Name = "Filan Fisteku"
