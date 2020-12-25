@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LocationComponent } from './location/location.component';
+import { CreateLocationComponent } from './create-location/create-location.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -25,6 +26,7 @@ export function tokenGetter() {
     AppComponent,
     RegisterComponent,
     LocationComponent,
+    CreateLocationComponent,
   ],
   imports: [
     BrowserModule,
