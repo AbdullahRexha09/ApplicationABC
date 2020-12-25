@@ -35,6 +35,7 @@ namespace webapplication
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("AppContection")));
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<ILocationService, LocationService>();
             services.AddCors(options =>
             {
                 options.AddPolicy("EnableCORS", builder =>

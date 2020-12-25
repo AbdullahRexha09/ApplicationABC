@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AltimaPC\\Desktop\\ABC\\Assignment\\back_webapplication\\webapplication.csproj": {}
+    "C:\\Users\\AltimaPC\\Desktop\\ABC\\ApplicationABC\\back_webapplication\\webapplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AltimaPC\\Desktop\\ABC\\Assignment\\back_webapplication\\webapplication.csproj": {
+    "C:\\Users\\AltimaPC\\Desktop\\ABC\\ApplicationABC\\back_webapplication\\webapplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AltimaPC\\Desktop\\ABC\\Assignment\\back_webapplication\\webapplication.csproj",
+        "projectUniqueName": "C:\\Users\\AltimaPC\\Desktop\\ABC\\ApplicationABC\\back_webapplication\\webapplication.csproj",
         "projectName": "webapplication",
-        "projectPath": "C:\\Users\\AltimaPC\\Desktop\\ABC\\Assignment\\back_webapplication\\webapplication.csproj",
+        "projectPath": "C:\\Users\\AltimaPC\\Desktop\\ABC\\ApplicationABC\\back_webapplication\\webapplication.csproj",
         "packagesPath": "C:\\Users\\AltimaPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AltimaPC\\Desktop\\ABC\\Assignment\\back_webapplication\\obj\\",
+        "outputPath": "C:\\Users\\AltimaPC\\Desktop\\ABC\\ApplicationABC\\back_webapplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AltimaPC\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
+import { LocationComponent } from './location/location.component';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -23,6 +24,7 @@ export function tokenGetter() {
     LoginComponent,
     AppComponent,
     RegisterComponent,
+    LocationComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ export function tokenGetter() {
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'register',component:RegisterComponent}
+      { path: 'register',component:RegisterComponent},
+      {path:'location',component:LocationComponent}
     ]),
     JwtModule.forRoot({
       config: {

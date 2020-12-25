@@ -12,5 +12,6 @@ namespace webapplication.Services
         bool DeleteLocation(Guid Id);
         Location UpdateLocation(Location location);
         Location AddLocation(Location location);
+        List<City> GetAllCities();
     }
 }
