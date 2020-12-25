@@ -27,6 +27,7 @@ namespace webapplication.Controllers
 
         [HttpGet]
         [Route("getAllCities")]
+        [Authorize(Roles = "User")]
         public IActionResult GetAllCities() 
         {
             List<City> cities = locationService.GetAllCities();
@@ -34,6 +35,7 @@ namespace webapplication.Controllers
         }
         [HttpGet]
         [Route("getAllLocations")]
+        [Authorize(Roles = "User")]
         public IActionResult GetAllLocations() 
         {
             List<Location> locations = locationService.GetAllLocations();
@@ -41,6 +43,7 @@ namespace webapplication.Controllers
         }
         [HttpPost]
         [Route("postLocation")]
+        [Authorize(Roles = "User")]
         public IActionResult PostLocation([FromBody] LocationModel locationModel) 
         {
             Location location = new Location
@@ -54,6 +57,7 @@ namespace webapplication.Controllers
         }
         [HttpDelete]
         [Route("deleteLocation")]
+        [Authorize(Roles = "User")]
         public IActionResult DeleteLocation(Guid id) 
         {
             locationService.DeleteLocation(id);
