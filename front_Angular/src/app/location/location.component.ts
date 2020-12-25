@@ -44,7 +44,7 @@ export class LocationComponent implements OnInit {
    });
   }
   create(){
-    this.router.navigate(["createLocation"]);
+    this.router.navigate(["createlocation"]);
   }
 
 

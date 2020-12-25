@@ -37,7 +37,8 @@ export function tokenGetter() {
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register',component:RegisterComponent},
-      {path:'location',component:LocationComponent}
+      { path:'location',component:LocationComponent},
+      { path:'createlocation',component:CreateLocationComponent}
     ]),
     JwtModule.forRoot({
       config: {
