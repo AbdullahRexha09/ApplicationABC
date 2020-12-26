@@ -652,7 +652,6 @@ C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netco
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.csprojAssemblyReference.cache
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\staticwebassets\webapplication.StaticWebAssets.Manifest.cache
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\staticwebassets\webapplication.StaticWebAssets.xml
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.MvcApplicationPartsAssemblyInfo.cache

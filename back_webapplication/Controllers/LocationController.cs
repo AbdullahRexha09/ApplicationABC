@@ -60,8 +60,12 @@ namespace webapplication.Controllers
                 Address = locationModel.Address,
                 CityId = locationModel.CityId
             };
-            locationService.AddLocation(location);
-            return Ok();
+            bool isAdded = locationService.AddLocation(location);
+            if (isAdded) 
+            {
+                return Ok(isAdded);
+            }
+            return BadRequest("Row wasn't Added");
         }
         [HttpPut]
         [Route("putLocation")]
@@ -76,16 +80,25 @@ namespace webapplication.Controllers
                 CityId = locationModel.CityId
             };
 
-            locationService.UpdateLocation(location);
-            return Ok();
+            bool isUpdated = locationService.UpdateLocation(location);
+            if (isUpdated) 
+            {
+                return Ok(isUpdated);
+            }
+            return BadRequest("Row wasn't Updated");
         }
         [HttpDelete]
         [Route("deleteLocation")]
         [Authorize(Roles = "User")]
         public IActionResult DeleteLocation(Guid id) 
         {
-            locationService.DeleteLocation(id);
-            return Ok();
+            bool isDeleted = locationService.DeleteLocation(id);
+            if (isDeleted) 
+            {
+                return Ok(isDeleted);
+            }
+            return BadRequest("Row wasn't Deleted");
+            
         }
 
     }

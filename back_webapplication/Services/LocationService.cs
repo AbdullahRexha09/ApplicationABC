@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,18 +14,29 @@ namespace webapplication.Services
         {
             this._db = _db;
         }
-        public void AddLocation(Location location)
+        public bool AddLocation(Location location)
         {
-            _db.Location.Add(location);
-            _db.SaveChanges();
-            return;
+            var item = _db.Location.Add(location);
+            if (item.State == EntityState.Added) 
+            {
+                _db.SaveChanges();
+                return true;
+            }
+            
+            return false;
         }
 
-        public void DeleteLocation(Guid Id)
+        public bool DeleteLocation(Guid Id)
         {
             Location location = _db.Location.FirstOrDefault(x => x.Id == Id);
-            _db.Location.Remove(location);
-            _db.SaveChanges();
+            var item = _db.Location.Remove(location);
+            if (item.State == EntityState.Deleted) 
+            {
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
+            
         }
 
         public List<Location> GetAllLocations()
@@ -41,9 +53,14 @@ namespace webapplication.Services
         }
         public bool UpdateLocation(Location location) 
         {
-            _db.Location.Update(location);
-            _db.SaveChanges();
-            return true;
+            var item = _db.Location.Update(location);
+            if (item.State == EntityState.Modified)
+            {
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
+            
         }
     }
 }
