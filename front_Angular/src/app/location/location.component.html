@@ -14,8 +14,9 @@
   <tbody>
   <tr *ngFor="let location of locations; index as i">
     <th scope="row">{{ i + 1 }}</th>
-    <td>
+    <td><a routerLink="/edituser">
       {{ location.name }}
+    </a>
     </td>
     <td>{{ location.address}}</td>
     <td>{{ location.city.name}}</td>
