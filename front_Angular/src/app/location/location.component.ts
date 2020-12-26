@@ -31,9 +31,14 @@ export class LocationComponent implements OnInit {
     
   }
   delete(locationId){
+    var r = confirm("Are you sure you want to delete?");
+    if(r == true){
     this.locationService.deleteLocation(locationId).subscribe(response =>{
       this.getLocations();
     });
+  }else{
+    console.log("nothing!");
+  }
     
   }
   getLocations(){
@@ -47,6 +52,9 @@ export class LocationComponent implements OnInit {
   }
   create(){
     this.router.navigate(["createlocation"]);
+  }
+  back(){
+    this.router.navigate([""]);
   }
 
 
