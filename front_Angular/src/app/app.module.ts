@@ -1,7 +1,7 @@
 import { AuthGuard } from './guards/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {JwtModule} from '@auth0/angular-jwt';
@@ -40,7 +40,8 @@ export function tokenGetter() {
       { path: 'login', component: LoginComponent },
       { path: 'register',component:RegisterComponent},
       { path:'location',component:LocationComponent},
-      { path:'createlocation',component:CreateLocationComponent}
+      { path:'createlocation',component:CreateLocationComponent},
+      { path:'editlocation',component:EditLocationComponent}
     ]),
     JwtModule.forRoot({
       config: {

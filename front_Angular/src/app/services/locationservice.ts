@@ -41,4 +41,18 @@ export class LocationService {
         headers: headers_object,
       });
   }
+  getLocationById(id){
+    const token: string = localStorage.getItem("jwt");
+    var headers_object = new HttpHeaders().set("Authorization", "Bearer " + token);
+      return this.http.get(moduleConfig.baserUrl + "api/location/getLocationById" + "?id=" + id, {
+          headers: headers_object,
+        });
+  }
+  updateLocationById(model,id){
+    const token: string = localStorage.getItem("jwt");
+    var headers_object = new HttpHeaders().set("Authorization", "Bearer " + token);
+      return this.http.put(moduleConfig.baserUrl + "api/location/putLocation" + "?id=" + id, model, {
+          headers: headers_object,
+        });
+  }
 }

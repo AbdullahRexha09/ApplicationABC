@@ -10,8 +10,9 @@ namespace webapplication.Services
     {
         List<Location> GetAllLocations();
         void DeleteLocation(Guid Id);
-        Location UpdateLocation(Location location);
         void AddLocation(Location location);
         List<City> GetAllCities();
+        Location GetLocationById(Guid id);
+        bool UpdateLocation(Location location);
     }
 }

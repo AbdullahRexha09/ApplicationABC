@@ -31,14 +31,19 @@ namespace webapplication.Services
         {
             return _db.Location.ToList();
         }
-
-        public Location UpdateLocation(Location location)
-        {
-            throw new NotImplementedException();
-        }
         public List<City> GetAllCities() 
         {
             return _db.City.ToList();
+        }
+        public Location GetLocationById(Guid id) 
+        {
+            return _db.Location.First(x => x.Id == id);
+        }
+        public bool UpdateLocation(Location location) 
+        {
+            _db.Location.Update(location);
+            _db.SaveChanges();
+            return true;
         }
     }
 }

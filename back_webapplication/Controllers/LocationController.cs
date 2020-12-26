@@ -41,6 +41,14 @@ namespace webapplication.Controllers
             List<Location> locations = locationService.GetAllLocations();
             return Ok(locations);
         }
+        [HttpGet]
+        [Route("getLocationById")]
+        [Authorize(Roles = "User")]
+        public IActionResult GetLocationById(Guid id)
+        {
+            Location location = locationService.GetLocationById(id);
+            return Ok(location);
+        }
         [HttpPost]
         [Route("postLocation")]
         [Authorize(Roles = "User")]
@@ -53,6 +61,22 @@ namespace webapplication.Controllers
                 CityId = locationModel.CityId
             };
             locationService.AddLocation(location);
+            return Ok();
+        }
+        [HttpPut]
+        [Route("putLocation")]
+        [Authorize(Roles = "User")]
+        public IActionResult PutLocation([FromBody] LocationModel locationModel,Guid id)
+        {
+            Location location = new Location
+            {
+                Id = id,
+                Name = locationModel.Name,
+                Address = locationModel.Address,
+                CityId = locationModel.CityId
+            };
+
+            locationService.UpdateLocation(location);
             return Ok();
         }
         [HttpDelete]
