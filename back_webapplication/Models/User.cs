@@ -25,6 +25,6 @@ namespace webapplication.Models
         [Column("refreshtokenexpirytime")]
         public DateTime RefreshTokenExpiryTime { get; set; }
         [Column("role")]
-        public string Role { get; set; }
+        public string Role { get; set; } = "User";
     }
 }

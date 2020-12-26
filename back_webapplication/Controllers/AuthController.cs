@@ -21,7 +21,6 @@ namespace webapplication.Controllers
     {
         private readonly IAuthService authService;
         private readonly ITokenService tokenService;
-        public static Guid userId;
         public AuthController(IAuthService authService, ITokenService tokenService)
         {
             this.authService = authService;
@@ -29,7 +28,7 @@ namespace webapplication.Controllers
         }
         // GET api/values
         [AllowAnonymous]
-        [HttpPost, Route("login")]
+        [HttpPost("login")]
         public IActionResult Login([FromBody]LoginModel user)
         {
             if (user == null)
@@ -39,7 +38,6 @@ namespace webapplication.Controllers
             if (authService.GetUser(user.Email, user.Password) != null)
             {
                 var item = authService.GetUserFromEmail(user.Email);
-                userId = item.Id;
                 if (item == null)
                 {
                     return Unauthorized();
@@ -64,8 +62,8 @@ namespace webapplication.Controllers
             return Unauthorized();
         }
         [AllowAnonymous]
-        [HttpPost, Route("register")]
-        public IActionResult RegisterAsync([FromBody]RegisterModel user) 
+        [HttpPost("register")]
+        public IActionResult Register([FromBody]RegisterModel user) 
         {  //TODO --- AutoMapper
             User objUser = new User
             {

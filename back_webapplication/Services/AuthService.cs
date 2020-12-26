@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,13 +23,17 @@ namespace webapplication.Services
 
         public  bool Register(User user)
         {
-            if (_db.User.FirstOrDefault(u=>u.Email == user.Email)!= null) 
+            if (_db.User.FirstOrDefault(u => u.Email == user.Email)!= null) 
             {
                 return false;
             }
-            var userToAdd = _db.User.Add(user);
-            _db.SaveChanges();
-            return true;
+            var item = _db.User.Add(user);
+            if (item.State == EntityState.Added) 
+            {
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
 
         }
         public User GetUserFromEmail(string email) 

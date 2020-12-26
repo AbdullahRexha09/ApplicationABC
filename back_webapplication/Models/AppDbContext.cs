@@ -37,6 +37,9 @@ namespace webapplication.Models
             modelBuilder.Entity<Location>().HasData(new Location[] {
             new Location{ Id = Guid.NewGuid(),Name = "Filan Fisteku",Address = "Kosove",CityId = Guid.Parse("58CA7A2D-EF9D-47DA-9BA2-2A27B76DA85C") },
             });
+             modelBuilder.Entity<User>()
+            .HasIndex(u => u.Email)
+            .IsUnique();
         }
     }
 }
