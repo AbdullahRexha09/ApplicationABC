@@ -12,11 +12,11 @@ namespace webapplication.Models
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        [Column("name"), StringLength(200)]
+        [Column("name"), StringLength(20)]
         public string Name { get; set; }
-        [Column("address"), StringLength(200)]
+        [Column("address"), StringLength(50)]
         public string Address { get; set; }
-        [Column("cityid"), StringLength(200)]
+        [Column("cityid"), StringLength(60)]
         [ForeignKey("City")]
         public Guid CityId { get; set; }
 

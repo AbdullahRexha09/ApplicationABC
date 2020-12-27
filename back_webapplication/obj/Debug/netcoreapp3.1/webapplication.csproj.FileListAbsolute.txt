@@ -662,3 +662,5 @@ C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netco
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.dll
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.pdb
 C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.csprojAssemblyReference.cache
+C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.csproj.CoreCompileInputs.cache
+C:\Users\AltimaPC\Desktop\ABC\ApplicationABC\back_webapplication\obj\Debug\netcoreapp3.1\webapplication.genruntimeconfig.cache

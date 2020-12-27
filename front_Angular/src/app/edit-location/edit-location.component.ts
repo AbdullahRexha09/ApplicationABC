@@ -69,7 +69,7 @@ export class EditLocationComponent implements OnInit {
     });
   }
   submit(editForm,locationId){
-    debugger;
+    
     this.locationService.updateLocationById(editForm.value,locationId).subscribe(response =>{
       this.router.navigate(["location"]);
     });

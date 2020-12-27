@@ -20,7 +20,6 @@ export class LocationComponent implements OnInit {
 
   ngOnInit() {
      this.locationService.getAllCities().subscribe(response => {
-       debugger;
       this.cities = <City>response;
     },
     err => {
@@ -43,7 +42,6 @@ export class LocationComponent implements OnInit {
   }
   getLocations(){
     this.locationService.getAllLocations().subscribe(response => {
-      debugger;
       this.locations = <Location>response
    },
    err => {

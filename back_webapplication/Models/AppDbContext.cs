@@ -12,9 +12,9 @@ namespace webapplication.Models
         { 
         
         }
-        public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<City> City { get; set; }
-        public virtual DbSet<Location> Location { get; set; }
+        public  DbSet<User> User { get; set; }
+        public  DbSet<City> City { get; set; }
+        public  DbSet<Location> Location { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

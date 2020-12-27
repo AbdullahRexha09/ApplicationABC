@@ -44,8 +44,13 @@ namespace webapplication.Services
         public bool UpdateUser(User user) 
         {
             var userToUpdate = _db.User.Update(user);
-            _db.SaveChanges();
-            return true;
+            if (userToUpdate.State == EntityState.Modified) 
+            {
+                _db.SaveChanges();
+                return true;
+            }
+            return false;            
+            
         }
     }
 }
