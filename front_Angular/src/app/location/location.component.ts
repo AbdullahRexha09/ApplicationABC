@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LocationService} from '../services/locationservice'
 import {City} from '../models/city'
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
@@ -15,7 +14,7 @@ export class LocationComponent implements OnInit {
   cities : City;
   locations : Location;
   closeResult = '';
-  constructor(private locationService:LocationService,private modalService: NgbModal,
+  constructor(private locationService:LocationService,
     private router: Router,private jwtHelper: JwtHelperService) { }
 
   ngOnInit() {

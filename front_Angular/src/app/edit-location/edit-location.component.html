@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="col-sm-5">
 <form #editForm="ngForm" (ngSubmit)="submit(editForm,locationId)">
     <div class="form-group">
       <label>Name</label>
@@ -27,3 +29,10 @@
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="cancel" style="margin-left: 5px;"class="btn btn-dark" (click)="cancel()">Cancel</button>
   </form>
+  </div>
+  <div class="col-sm-5">
+    <agm-map [latitude]="+longitude" [longitude]="+latitude" ngModel (mapClick)="onChoseLocation($event)">
+      <agm-marker [latitude]="+longitude" ngModel [longitude]="+latitude"></agm-marker>
+      </agm-map>
+  </div>
+</div>

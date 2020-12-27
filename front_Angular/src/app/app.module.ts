@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { LocationComponent } from './location/location.component';
 import { CreateLocationComponent } from './create-location/create-location.component';
 import { EditLocationComponent } from './edit-location/edit-location.component';
+import { AgmCoreModule } from '@agm/core';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -43,6 +44,9 @@ export function tokenGetter() {
       { path:'createlocation',component:CreateLocationComponent},
       { path:'editlocation',component:EditLocationComponent}
     ]),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyDoXcfFQNt1k86YaNEpvpPN4zEsSaiQxOo'
+    }),
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

@@ -6,6 +6,7 @@ import { City } from '../models/city';
 import {Location} from '../models/location';
 import { LocationService } from '../services/locationservice';
 
+
 @Component({
   selector: 'app-edit-location',
   templateUrl: './edit-location.component.html',
@@ -15,12 +16,14 @@ export class EditLocationComponent implements OnInit {
   state$: Observable<object>;
   location : any;
   cities : City;
-  latitude : string = '';
-  longitude : string = '';
+  latitude : any;
+  longitude : any;
   objCity : any;
   locationId : string;
   arrivedlocation : any;
   city1 :any;
+  lat :number =  59.3293;
+  long :number =  18.0686;
   constructor(public activatedRoute: ActivatedRoute,private locationService: LocationService,
     private router: Router) { }
 
@@ -46,22 +49,27 @@ export class EditLocationComponent implements OnInit {
 
   }
   selectedCity(cityId){
-    
+    debugger;
     this.objCity = Object.values(this.cities).find(x=>x.id == cityId);
     if(this.objCity){
       this.latitude = this.objCity.latitude;
       this.longitude = this.objCity.longitude;
+      this.lat = parseFloat(this.latitude);
+      this.long = parseFloat(this.longitude);
     }
 
   }
   getLocation(id){
+    debugger;
     this.locationService.getLocationById(id).subscribe(response => {
       
       this.location = <any>response;
       this.latitude = Object.values(this.cities).find(x=>x.id == this.location.cityId).latitude;
       this.longitude = Object.values(this.cities).find(x=>x.id == this.location.cityId).longitude;
       this.objCity = Object.values(this.cities).find(x=>x.id == this.location.cityId);
-    
+      // this.lat = parseFloat(this.latitude);
+      // this.long = parseFloat(this.longitude);
+      
      
      },
     err => {
@@ -77,6 +85,10 @@ export class EditLocationComponent implements OnInit {
   }
   cancel(){
     this.router.navigate(["location"]);
+  }
+  onChoseLocation(event){
+    debugger;
+    console.log(event);
   }
 
 }
