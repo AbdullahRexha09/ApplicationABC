@@ -22,8 +22,6 @@ export class EditLocationComponent implements OnInit {
   locationId : string;
   arrivedlocation : any;
   city1 :any;
-  lat :number =  59.3293;
-  long :number =  18.0686;
   constructor(public activatedRoute: ActivatedRoute,private locationService: LocationService,
     private router: Router) { }
 
@@ -54,8 +52,6 @@ export class EditLocationComponent implements OnInit {
     if(this.objCity){
       this.latitude = this.objCity.latitude;
       this.longitude = this.objCity.longitude;
-      this.lat = parseFloat(this.latitude);
-      this.long = parseFloat(this.longitude);
     }
 
   }
@@ -67,8 +63,6 @@ export class EditLocationComponent implements OnInit {
       this.latitude = Object.values(this.cities).find(x=>x.id == this.location.cityId).latitude;
       this.longitude = Object.values(this.cities).find(x=>x.id == this.location.cityId).longitude;
       this.objCity = Object.values(this.cities).find(x=>x.id == this.location.cityId);
-      // this.lat = parseFloat(this.latitude);
-      // this.long = parseFloat(this.longitude);
       
      
      },
